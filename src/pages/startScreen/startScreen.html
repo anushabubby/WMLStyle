@@ -1,0 +1,56 @@
+<ion-header class="page-header">
+  <ion-navbar align-title=”center”>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <img
+        class="displayed picker-opts-left"  height="25 px" width="25 px"
+        src="../assets/imgs/walmartLogo.png" />
+    </ion-buttons>
+    <ion-title>
+      <span text-color="my-custom-color"> WM Life Style </span>
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only><ion-icon ios="ios-settings" md="md-settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="page-home">
+
+<p>hello</p>
+
+  <ion-content>
+    <ion-slides autoplay="5000" loop="true" speed="3000">
+      <ion-slide *ngFor="let slide of slideData">
+        <img src="{{slide.image}}" />
+      </ion-slide>
+    </ion-slides>
+  </ion-content>
+
+  <div class="row">
+
+  </div>
+  <div class="row" >
+    <div class="col" >
+      <a class="button button-block ion-button2">
+        login
+      </a>
+    </div>
+    <div  class="col">
+      <a class="button button-block ion-button" >
+        Get started
+      </a>
+    </div>
+  </div>
+
+  <!--<ion-grid>-->
+    <!--<ion-row>-->
+      <!--<ion-col width-50><button style="width:100%">Clear</button></ion-col>-->
+      <!--<ion-col width-50><button style="width:100%">Save</button></ion-col>-->
+    <!--</ion-row>-->
+  <!--</ion-grid>-->
+
+
+</ion-content>

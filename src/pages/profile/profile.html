@@ -1,0 +1,112 @@
+<ion-header class="page-header">
+  <ion-navbar align-title=”center”>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <img
+        class="displayed picker-opts-left"  height="25 px" width="25 px"
+        src="../assets/imgs/walmartLogo.png" />
+    </ion-buttons>
+    <ion-title>
+      <span text-color="my-custom-color"> WM Life Style </span>
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only><ion-icon ios="ios-settings" md="md-settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="page-home">
+
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../assets/imgs/avatar.png" height="30 px" width="30 px">
+      </ion-avatar>
+      <h2>Anusha</h2>
+      <p>July 26, 1992</p>
+    </ion-item>
+    <img src="https://i.ytimg.com/vi/RqRNd4UyA4c/maxresdefault.jpg"
+         height="150 px" width="150 px"
+    />
+    <ion-card-content>
+      <ion-card-title>
+        Theme Ionic 2 Application (Part 1) - Customize and modify default theme layer of ionic application
+      </ion-card-title>
+      <ion-list no-lines>
+
+        <form>
+
+          <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text">Anusha Madabhushi</ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Gender</ion-label>
+            <ion-select>
+              <ion-option value="F" checked="true">Female</ion-option>
+              <ion-option value="M">Male</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Date of birth</ion-label>
+            <ion-datetime displayFormat="DD-MM-YYYY HH:mm"></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Address Line 1</ion-label>
+            <ion-input  type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Address Line 2</ion-label>
+            <ion-input  type="text"></ion-input>
+          </ion-item>
+
+          <!--<ion-item>-->
+            <!--<ion-label floating>Address Line 1</ion-label>-->
+            <!--<ion-input  type="number"></ion-input>-->
+          <!--</ion-item>-->
+
+          <ion-item>
+            <ion-label floating>City</ion-label>
+            <ion-input  type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>State</ion-label>
+            <ion-select>
+              <ion-option value="AR" checked="true">Arkansas</ion-option>
+              <ion-option value="TX">Texas</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Zip Code</ion-label>
+            <ion-input  type="number"></ion-input>
+          </ion-item>
+
+        </form>
+
+      </ion-list>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>54 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>40 Comments</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header class="page-header">
+  <ion-navbar align-title=”center”>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <img
+        class="displayed picker-opts-left"  height="25 px" width="25 px"
+        src="../assets/imgs/walmartLogo.png" />
+    </ion-buttons>
+    <ion-title>
+              <span text-color="my-custom-color"> WM Life Style </span>
+      </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only><ion-icon ios="ios-settings" md="md-settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="page-home">
+
+  <button ion-button large block outline icon-start
+          class="my-button"
+           *ngFor="let item of items"
+          (click)="itemTapped($event, item)">
+    <ion-icon [name]="item.icon" item-start></ion-icon>
+    {{item.title}}
+  </button>
+
+</ion-content>
