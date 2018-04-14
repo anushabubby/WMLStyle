@@ -5,18 +5,18 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { StartScreenPage } from '../pages/startScreen/startScreen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProfilePage } from '../pages/profile/profile';
+import { QuestionnairePage } from '../pages/questionnaire/questionnaire';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    StartScreenPage,
-    ProfilePage
+    ProfilePage,
+    QuestionnairePage
   ],
   imports: [
     BrowserModule,
@@ -27,8 +27,8 @@ import { ProfilePage } from '../pages/profile/profile';
     MyApp,
     HomePage,
     ListPage,
-    StartScreenPage,
-    ProfilePage
+    ProfilePage,
+    QuestionnairePage
   ],
   providers: [
     StatusBar,

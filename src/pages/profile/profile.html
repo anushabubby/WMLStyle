@@ -1,112 +1,93 @@
 <ion-header class="page-header">
-  <ion-navbar align-title=”center”>
+  <ion-navbar align-title=”center” height="auto">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-buttons left>
       <img
         class="displayed picker-opts-left"  height="25 px" width="25 px"
-        src="../assets/imgs/walmartLogo.png" />
+        src="../assets/imgs/commonImgs/walmartLogo.png" />
     </ion-buttons>
     <ion-title>
       <span text-color="my-custom-color"> WM Life Style </span>
     </ion-title>
-    <ion-buttons right>
-      <button ion-button icon-only><ion-icon ios="ios-settings" md="md-settings"></ion-icon></button>
-    </ion-buttons>
   </ion-navbar>
+  <ion-fab bottom right #fab2 style="position: absolute">
+    <button ion-fab color="light"><ion-icon name="settings"></ion-icon></button>
+    <ion-fab-list side="bottom">
+      <button ion-fab><ion-icon name="cart"></ion-icon></button>
+      <button ion-fab><ion-icon name="paper"></ion-icon></button>
+      <button ion-fab><ion-icon name="card"></ion-icon></button>
+      <button ion-fab><ion-icon name="call"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-header>
 
 <ion-content padding class="page-home">
-
   <ion-card>
+
     <ion-item>
       <ion-avatar item-start>
-        <img src="../assets/imgs/avatar.png" height="30 px" width="30 px">
+        <img src="../assets/imgs/profileImgs/avatar.png">
       </ion-avatar>
-      <h2>Anusha</h2>
-      <p>July 26, 1992</p>
+      <h2><b>Anusha Madabhushi</b></h2>
+      <div style="overflow: hidden;">
+        <p style="float: left; font-weight: bold">Status: </p>
+        <p style="color: green"> Active</p>
+      </div>
     </ion-item>
-    <img src="https://i.ytimg.com/vi/RqRNd4UyA4c/maxresdefault.jpg"
-         height="150 px" width="150 px"
-    />
+
+      <ion-slides autoplay="5000" loop="true" speed="3000">
+        <ion-slide *ngFor="let slide of slideData">
+          <img src="{{slide.image}}" style="width: 100%; height: 550px"/>
+        </ion-slide>
+      </ion-slides>
+
+    <!--<img src="../assets/imgs/profileImgs/profileImg.jpg">-->
+
     <ion-card-content>
-      <ion-card-title>
-        Theme Ionic 2 Application (Part 1) - Customize and modify default theme layer of ionic application
-      </ion-card-title>
-      <ion-list no-lines>
-
-        <form>
-
-          <ion-item>
-            <ion-label floating>Name</ion-label>
-            <ion-input type="text">Anusha Madabhushi</ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-label floating>Gender</ion-label>
-            <ion-select>
-              <ion-option value="F" checked="true">Female</ion-option>
-              <ion-option value="M">Male</ion-option>
-            </ion-select>
-          </ion-item>
-
-          <ion-item>
-            <ion-label floating>Date of birth</ion-label>
-            <ion-datetime displayFormat="DD-MM-YYYY HH:mm"></ion-datetime>
-          </ion-item>
-
-          <ion-item>
-            <ion-label floating>Address Line 1</ion-label>
-            <ion-input  type="text"></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-label floating>Address Line 2</ion-label>
-            <ion-input  type="text"></ion-input>
-          </ion-item>
-
-          <!--<ion-item>-->
-            <!--<ion-label floating>Address Line 1</ion-label>-->
-            <!--<ion-input  type="number"></ion-input>-->
-          <!--</ion-item>-->
-
-          <ion-item>
-            <ion-label floating>City</ion-label>
-            <ion-input  type="text"></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-label floating>State</ion-label>
-            <ion-select>
-              <ion-option value="AR" checked="true">Arkansas</ion-option>
-              <ion-option value="TX">Texas</ion-option>
-            </ion-select>
-          </ion-item>
-
-          <ion-item>
-            <ion-label floating>Zip Code</ion-label>
-            <ion-input  type="number"></ion-input>
-          </ion-item>
-
-        </form>
-
-      </ion-list>
+      <ion-item>
+        <ion-icon name="paper" item-start large></ion-icon>
+        <h2>Address</h2>
+        <p>11 N. Way St, Madison, WI 53703</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" item-left large ></ion-icon>
+        <h2>Phone</h2>
+        <p>123-123-1234</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="at" item-left large ></ion-icon>
+        <h2>Email</h2>
+        <p>test123@gmail.com</p>
+      </ion-item>
+      <ion-item>
+        <ion-label> Allow notifications</ion-label>
+        <ion-toggle style="float: left" checked="true"></ion-toggle>
+      </ion-item>
+      <!--<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>-->
     </ion-card-content>
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>54 Likes</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>40 Comments</div>
-        </button>
-      </ion-col>
-    </ion-row>
+
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<button ion-button icon-left clear small>-->
+          <!--<ion-icon name="thumbs-up"></ion-icon>-->
+          <!--<div>12 Likes</div>-->
+        <!--</button>-->
+      <!--</ion-col>-->
+      <!--<ion-col>-->
+        <!--<button ion-button icon-left clear small>-->
+          <!--<ion-icon name="text"></ion-icon>-->
+          <!--<div>4 Comments</div>-->
+        <!--</button>-->
+      <!--</ion-col>-->
+      <!--<ion-col center text-center>-->
+        <!--<ion-note>-->
+          <!--11h ago-->
+        <!--</ion-note>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+
   </ion-card>
 
 </ion-content>
