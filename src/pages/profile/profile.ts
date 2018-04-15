@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { WelcomePage } from '../welcome/welcome';
 
 @Component({
   selector: 'page-profile',
@@ -6,18 +8,12 @@ import { Component } from '@angular/core';
 })
 
 export class ProfilePage {
-  slideData = [
-    { image: "../assets/imgs/profileImgs/event1.jpg" },
-    { image: "../assets/imgs/profileImgs/event2.jpg" },
-    { image: "../assets/imgs/profileImgs/event3.jpg" },
-    { image: "../assets/imgs/profileImgs/event4.jpg" },
-    { image: "../assets/imgs/profileImgs/apparel1.jpg" },
-    { image: "../assets/imgs/profileImgs/apparel2.jpg" },
-    { image: "../assets/imgs/profileImgs/apparel3.jpg" },
-    { image: "../assets/imgs/profileImgs/recepie1.jpg" },
-    { image: "../assets/imgs/profileImgs/recepie2.jpg" }]
 
-  constructor(){
+  constructor(public navCtrl: NavController){
 
   }
+  goToWelcomePage(){
+    this.navCtrl.push(WelcomePage);
+  }
+
 }
