@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ProfilePage } from '../profile/profile';
+import { PreferencesPage } from '../preferences/preferences';
 
 @Component({
   selector: 'page-welcome',
@@ -11,8 +11,8 @@ export class WelcomePage {
   constructor(public navCtrl: NavController) {
   }
 
-  setProfile(){
-    this.navCtrl.push(ProfilePage);
+  gotToKnowYou(){
+    this.navCtrl.setRoot(PreferencesPage);
   }
 
 }
