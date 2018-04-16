@@ -127,7 +127,6 @@
       </ion-item>
 
     </ion-list>
-
   </div>
   <div [ngSwitch]="choice">
     <ion-row *ngSwitchCase="'allergies'" >
@@ -161,7 +160,8 @@
       </ion-col>
       <ion-col>
         <ion-buttons end>
-          <button ion-button outline item-end icon-right>
+          <button ion-button outline (click)="goToHome()"
+                  item-end icon-right>
             <ion-icon name="thumbs-up"></ion-icon>
             Done
           </button>

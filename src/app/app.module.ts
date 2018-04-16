@@ -8,14 +8,22 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProfilePage } from '../pages/profile/profile';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { PreferencesPage } from '../pages/preferences/preferences';
+import { HomePage } from '../pages/home/home';
+import { LandingViewPage } from '../pages/landingView/landingView';
+import { QuestionnairePage } from '../pages/questionnaire/questionnaire';
+import { ProductPage } from '../pages/products/product';
 
 @NgModule({
   declarations: [
     GetStartedPage,
     MyApp,
+    HomePage,
     PreferencesPage,
     ProfilePage,
-    WelcomePage
+    WelcomePage,
+    LandingViewPage,
+    QuestionnairePage,
+    ProductPage
   ],
   imports: [
     BrowserModule,
@@ -25,9 +33,13 @@ import { PreferencesPage } from '../pages/preferences/preferences';
   entryComponents: [
     GetStartedPage,
     MyApp,
+    HomePage,
     PreferencesPage,
     ProfilePage,
-    WelcomePage
+    WelcomePage,
+    LandingViewPage,
+    QuestionnairePage,
+    ProductPage
   ],
   providers: [
     StatusBar,

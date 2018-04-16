@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-preferences',
@@ -19,6 +20,10 @@ export class PreferencesPage {
   }
   skipStyle(){
     this.choice = 'lifeStyle';
+  }
+
+  goToHome(){
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

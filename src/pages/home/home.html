@@ -1,0 +1,52 @@
+<ion-header class="page-header">
+  <ion-navbar align-title=”center” height="auto">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <img
+        class="displayed picker-opts-left"  height="25 px" width="25 px"
+        src="../assets/imgs/commonImgs/walmartLogo.png" />
+    </ion-buttons>
+    <ion-title>
+      <span text-color="my-custom-color"> WM Life Style </span>
+    </ion-title>
+  </ion-navbar>
+  <ion-fab bottom right #fab2 style="position: absolute">
+    <button ion-fab color="light"><ion-icon name="settings"></ion-icon></button>
+    <ion-fab-list side="bottom">
+      <button ion-fab><ion-icon name="cart"></ion-icon></button>
+      <button ion-fab><ion-icon name="paper"></ion-icon></button>
+      <button ion-fab><ion-icon name="card"></ion-icon></button>
+      <button ion-fab><ion-icon name="call"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-header>
+
+<ion-content padding class="page-home">
+
+  <button ion-button large block outline icon-start
+          class="my-button"
+          (click)="goToLandingView('theme')"
+          style="background-image: url('../assets/imgs/homeImgs/theme.jpg'); background-size: cover; color: white">
+    <ion-icon name="image" item-start></ion-icon>
+    Select Your Theme
+  </button><br>
+  <button ion-button large block outline icon-start
+          class="my-button"
+          (click)="goToLandingView('recepie')"
+          style="background-image: url('../assets/imgs/homeImgs/recepie.jpg'); background-size: cover; color: white">
+    <ion-icon name="restaurant" item-start></ion-icon>
+    Select Your Recipe
+  </button>
+  <br>
+  <button ion-button large block outline icon-start
+          class="my-button"
+          (click)="goToLandingView('electronics')"
+          style="background-image: url('../assets/imgs/homeImgs/electronic.jpg'); background-size: cover; color: white">
+    <ion-icon name="game-controller-b" item-start></ion-icon>
+    Select Your Electronics
+  </button>
+
+
+</ion-content>

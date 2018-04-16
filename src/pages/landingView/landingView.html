@@ -1,0 +1,109 @@
+<ion-header class="page-header">
+  <ion-navbar align-title=”center”>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <button ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <span text-color="my-custom-color"> WM Life Style </span>
+    </ion-title>
+  </ion-navbar>
+  <ion-fab bottom right #fab2 style="position: absolute">
+    <button ion-fab color="light"><ion-icon name="settings"></ion-icon></button>
+    <ion-fab-list side="bottom">
+      <button ion-fab><ion-icon name="cart"></ion-icon></button>
+      <button ion-fab><ion-icon name="paper"></ion-icon></button>
+      <button ion-fab><ion-icon name="card"></ion-icon></button>
+      <button ion-fab><ion-icon name="call"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-header>
+
+<ion-content padding class="page-landingView">
+
+  <div [ngSwitch]="passedParam">
+    <ion-row *ngSwitchCase="'theme'" >
+      <button ion-button large block outline icon-start
+              class="my-button"
+              style="background-image: url('../assets/imgs/landingView/holiday.jpg');
+          background-size: cover; color: white">
+        <!--<ion-icon name="image" item-start></ion-icon>-->
+        Holidays
+      </button>
+      <br>
+      <button ion-button large block outline icon-start
+              class="my-button"
+              style="background-image: url('../assets/imgs/landingView/events.gif');
+                     background-position: -15px center;
+              background-size: cover; color: white">
+        <!--<ion-icon name="camera" item-start></ion-icon>-->
+        Events
+      </button>
+      <br>
+      <button ion-button large block outline icon-start
+              class="my-button"
+              style="background-image: url('../assets/imgs/landingView/getaways.jpg');
+          background-size: cover; color: white">
+        <!--<ion-icon name="game-controller-b" item-start></ion-icon>-->
+        Getaways
+      </button>
+    </ion-row>
+    <ion-row *ngSwitchCase="'recepie'" >
+      <button ion-button large block outline icon-start
+              class="my-button"
+              style="background-image: url('../assets/imgs/landingView/indian.jpg');
+          background-size: cover; color: white">
+        <!--<ion-icon name="image" item-start></ion-icon>-->
+        Indian
+      </button>
+      <br>
+      <button ion-button large block outline icon-start
+              class="my-button"
+              style="background-image: url('../assets/imgs/landingView/mediterranean.jpg'); background-size: cover; color: white">
+        <!--<ion-icon name="camera" item-start></ion-icon>-->
+        Mediterranean
+      </button>
+      <br>
+      <button ion-button large block outline icon-start
+              class="my-button"
+              style="background-image: url('../assets/imgs/landingView/italian.jpg');
+          background-size: cover; color: white">
+        <!--<ion-icon name="game-controller-b" item-start></ion-icon>-->
+        Italian
+      </button>
+    </ion-row>
+    <ion-row *ngSwitchCase="'electronics'" >
+      <button ion-button large block outline icon-start
+              class="my-button"
+              style="background-image: url('../assets/imgs/landingView/tv.jpg');
+              background-position: -50px center;
+          background-size: cover; color: white">
+        <!--<ion-icon name="image" item-start></ion-icon>-->
+        TV
+      </button>
+      <br>
+      <button ion-button large block outline icon-start
+              (click)="goToQuestionnaire()"
+              class="my-button"
+              style="background-image: url('../assets/imgs/landingView/camera.jpg');
+              background-size: cover; color: white">
+        <!--<ion-icon name="camera" item-start></ion-icon>-->
+        Camera
+      </button>
+      <br>
+      <button ion-button large block outline icon-start
+              class="my-button"
+              style="background-image: url('../assets/imgs/landingView/gaming.jpg');
+          background-position: -15px center;
+          background-size: cover; color: white">
+        <!--<ion-icon name="game-controller-b" item-start></ion-icon>-->
+        Gaming
+      </button>
+    </ion-row>
+  </div>
+
+</ion-content>
