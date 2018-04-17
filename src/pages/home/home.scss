@@ -40,14 +40,14 @@
   .my-button{
     height:250px !important;
     color: #004c91;
-    border-color: black;
-    box-shadow: 5px 5px 8px grey;
-    margin-right: 10px;
+    box-shadow: 2px 3px 5px grey;
   }
   .my-button:hover{
     background-color: cornflowerblue !important;
-    webkit-filter: blur(4px);
-    filter: blur(4px);
+  }
+
+  #theme,#restaurant,#game-controller-b{
+    background-color: #fff;
   }
 
   .card-background-page {

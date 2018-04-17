@@ -13,6 +13,7 @@ import { LandingViewPage } from '../pages/landingView/landingView';
 import { QuestionnairePage } from '../pages/questionnaire/questionnaire';
 import { ProductPage } from '../pages/products/product';
 import { CartViewPage } from '../pages/cartView/cartView';
+import { EventsPage } from '../pages/events/events'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CartViewPage } from '../pages/cartView/cartView';
     LandingViewPage,
     QuestionnairePage,
     ProductPage,
-    CartViewPage
+    CartViewPage,
+    EventsPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { CartViewPage } from '../pages/cartView/cartView';
     LandingViewPage,
     QuestionnairePage,
     ProductPage,
-    CartViewPage
+    CartViewPage,
+    EventsPage
   ],
   providers: [
     StatusBar,
