@@ -26,8 +26,8 @@ import { EventsPage } from '../pages/events/events'
     LandingViewPage,
     QuestionnairePage,
     ProductPage,
-    CartViewPage,
-    EventsPage
+    EventsPage,
+    CartViewPage
   ],
   imports: [
     BrowserModule,
