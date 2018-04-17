@@ -14,6 +14,8 @@ import { QuestionnairePage } from '../pages/questionnaire/questionnaire';
 import { ProductPage } from '../pages/products/product';
 import { EventsPage } from '../pages/events/events'
 import { CartViewPage } from '../pages/cartView/cartView';
+import { EventsQuestionsPage } from '../pages/eventsQuestions/eventsQuestions'
+import { EventsNFLItems } from '../pages/eventsNFLItems/eventsNFLItems'
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CartViewPage } from '../pages/cartView/cartView';
     QuestionnairePage,
     ProductPage,
     EventsPage,
-    CartViewPage
+    CartViewPage,
+    EventsQuestionsPage,
+    EventsNFLItems
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ import { CartViewPage } from '../pages/cartView/cartView';
     QuestionnairePage,
     ProductPage,
     EventsPage,
-    CartViewPage
+    CartViewPage,
+    EventsQuestionsPage,
+    EventsNFLItems
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,150 @@
+<ion-header class="page-header">
+        <ion-navbar align-title=”center”>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-buttons left>
+            <button ion-button (click)="goBack()">
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+          </ion-buttons>
+          <ion-title>
+            <span text-color="my-custom-color"> WM Life Style </span>
+          </ion-title>
+        </ion-navbar>
+        <ion-fab bottom right #fab2 style="position: absolute">
+          <button ion-fab color="light"
+          ><ion-icon name="settings"></ion-icon></button>
+          <ion-fab-list side="bottom">
+            <button ion-fab (click)="goToCart($event)"><ion-icon name="cart"></ion-icon></button>
+            <button ion-fab><ion-icon name="paper"></ion-icon></button>
+            <button ion-fab><ion-icon name="card"
+            ></ion-icon></button>
+            <button ion-fab><ion-icon name="call"></ion-icon></button>
+          </ion-fab-list>
+        </ion-fab>
+      </ion-header>
+      
+      <ion-content>
+        <ion-list>
+          <ion-list-header>
+            Visitors - Adults
+          </ion-list-header>
+          <ion-item *ngFor="let camera of cameraProductsSmall; let i = index;">
+            <ion-avatar item-start>
+              <img src="../../assets/imgs/products/beer.jpg">
+            </ion-avatar>
+            <h2><b>{{ camera.name }}</b></h2>
+            <h3>{{ camera.product }}</h3>
+            <h3>${{ camera.price  }}</h3>
+            <ion-row>
+              <ion-buttons>
+                <button ion-button outline (tap)="saveEvent($event, i)">
+                  <ion-icon name="heart"></ion-icon>{{saved[i] ? ' Saved' : ''}}
+                </button>
+              </ion-buttons>
+              <ion-buttons>
+                <button ion-button outline (tap)="tapEvent($event, i)">
+                  {{ tap[i] }}<ion-icon name="thumbs-up"></ion-icon>
+                </button>
+              </ion-buttons>
+              <ion-buttons end>
+                <button ion-button outline (click)="addToCart(camera, i)"
+                        class="cartBtn"
+                        [ngClass]="{'cartBtnHover': addedToCart[i]}">
+                  <ion-icon name="cart"></ion-icon>
+                </button>
+              </ion-buttons>
+              <ion-buttons end>
+                <button ion-button outline>
+                  <ion-icon name="more"></ion-icon>
+                </button>
+              </ion-buttons>
+            </ion-row>
+      
+          </ion-item>
+      
+        </ion-list>
+      
+        <!--<ion-list>-->
+          <!--<ion-list-header>-->
+            <!--Camera - Medium-->
+          <!--</ion-list-header>-->
+      
+          <!--<ion-item *ngFor="let camera of cameraProductsMedium">-->
+            <!--<ion-avatar item-start>-->
+              <!--<img src="../../assets/imgs/products/cameraImg.jpg">-->
+            <!--</ion-avatar>-->
+            <!--<h2><b>{{ camera.name }}</b></h2>-->
+            <!--<h3>{{ camera.product }}</h3>-->
+            <!--<h3>${{ camera.price  }}</h3>-->
+            <!--<ion-row>-->
+              <!--<ion-buttons>-->
+                <!--<button ion-button outline>-->
+                  <!--<ion-icon name="heart"></ion-icon>-->
+                <!--</button>-->
+              <!--</ion-buttons>-->
+              <!--<ion-buttons>-->
+                <!--<button ion-button outline (tap)="tapEvent($event)">-->
+                  <!--<ion-icon name="thumbs-up"></ion-icon>  {{tap}} likes-->
+                <!--</button>-->
+              <!--</ion-buttons>-->
+              <!--<ion-buttons end>-->
+                <!--<button ion-button outline (click)="goToCart()">-->
+                  <!--<ion-icon name="cart"></ion-icon>-->
+                <!--</button>-->
+              <!--</ion-buttons>-->
+              <!--<ion-buttons end>-->
+                <!--<button ion-button outline>-->
+                  <!--<ion-icon name="more"></ion-icon>-->
+                <!--</button>-->
+              <!--</ion-buttons>-->
+            <!--</ion-row>-->
+      
+          <!--</ion-item>-->
+      
+      
+        <!--</ion-list>-->
+      
+        <!--<ion-list>-->
+          <!--<ion-list-header>-->
+            <!--Camera - Large-->
+          <!--</ion-list-header>-->
+      
+          <!--<ion-item *ngFor="let camera of cameraProductsLarge">-->
+            <!--<ion-avatar item-start>-->
+              <!--<img src="../../assets/imgs/products/cameraImg.jpg">-->
+            <!--</ion-avatar>-->
+            <!--<h2><b>{{ camera.name }}</b></h2>-->
+            <!--<h3>{{ camera.product }}</h3>-->
+            <!--<h3>${{ camera.price  }}</h3>-->
+            <!--<ion-row>-->
+              <!--<ion-buttons>-->
+                <!--<button ion-button outline>-->
+                  <!--<ion-icon name="heart"></ion-icon>-->
+                <!--</button>-->
+              <!--</ion-buttons>-->
+              <!--<ion-buttons>-->
+                <!--<button ion-button outline (tap)="tapEvent($event)">-->
+                  <!--<ion-icon name="thumbs-up"></ion-icon>  {{tap}} likes-->
+                <!--</button>-->
+              <!--</ion-buttons>-->
+              <!--<ion-buttons end>-->
+                <!--<button ion-button outline>-->
+                  <!--<ion-icon name="cart"></ion-icon>-->
+                <!--</button>-->
+              <!--</ion-buttons>-->
+              <!--<ion-buttons end>-->
+                <!--<button ion-button outline>-->
+                  <!--<ion-icon name="more"></ion-icon>-->
+                <!--</button>-->
+              <!--</ion-buttons>-->
+            <!--</ion-row>-->
+      
+          <!--</ion-item>-->
+      
+      
+        <!--</ion-list>-->
+      
+      </ion-content>
+      
