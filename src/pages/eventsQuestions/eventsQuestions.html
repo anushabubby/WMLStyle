@@ -22,27 +22,27 @@
           </ion-fab-list>
         </ion-fab>
       </ion-header>
-      
-      
+
+
       <ion-content class="outer-content">
-      
+        <p></p>
+        <br>
         <ion-list radio-group *ngFor="let ques of questionnaireDetails">
           <ion-list-header text-wrap>
             <ion-icon item-start name="clipboard"></ion-icon>
             {{ques.question}}
           </ion-list-header>
-      
+
           <ion-item *ngFor="let option of ques.options">
             <ion-label color="dark">{{ option }}</ion-label>
             <ion-radio value={{option}}></ion-radio>
           </ion-item>
         </ion-list>
-      
+
         <ion-buttons end>
           <button ion-button block large (click)="showProducts()">
             Done
           </button>
         </ion-buttons>
-      
+
       </ion-content>
-      

@@ -55,7 +55,8 @@
         <ion-label>Gluten</ion-label>
         <ion-toggle value="Gluten"></ion-toggle>
       </ion-item>-->
-
+      <p></p>
+      <br>
       <ion-grid>
         <ion-row>
           <ion-col col-6>
@@ -256,9 +257,11 @@
 
       <!--<ion-content>-->
       <ion-list-header>
-          <ion-icon name="basket"></ion-icon>
-      Your Selected bundle:
-        <p>Total : Items-4 = $61</p>
+        <p></p>
+        <br>
+        <ion-icon name="basket"></ion-icon>
+        Your Selected bundle:
+        <p>Total : Item-4 = $75</p>
       </ion-list-header>
       <ion-list>
         <ion-item>
@@ -279,6 +282,23 @@
           <p>Qty: 3 x $ 7 = $21</p>
           <button ion-button clear item-end>View Details</button>
         </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img class="center" src="../assets/imgs/xmas/pic3.jpg">
+          </ion-thumbnail>
+          <h2>Velvet Stocking, Med, Red</h2>
+          <p>Qty: 3 x $ 5 = $15</p>
+          <button ion-button clear item-end>View Details</button>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img class="center" src="../assets/imgs/xmas/pic4.jpg">
+          </ion-thumbnail>
+          <h2>Bundle Discount</h2>
+          <p>Congrats you get: -$1.00</p>
+          <p>Extended Return</p>
+          <button ion-button clear item-end>View Details</button>
+        </ion-item>
       </ion-list>
       <!--</ion-content>-->
 
@@ -286,6 +306,13 @@
 
 
     <ion-list *ngSwitchCase="'gifts'">
+      <ion-list-header>
+        <p></p>
+        <br>
+        <ion-icon name="sad"></ion-icon>
+        Sorry to see that you selected no gifts ! :(
+        <p>Total : Items-0 = $0</p>
+      </ion-list-header>
 
       <!-- <ion-item>
          <ion-label>Vegetarian</ion-label>
@@ -373,7 +400,7 @@
           <button ion-button outline (click)="goToHome()"
                   item-end icon-right>
             <ion-icon name="thumbs-up"></ion-icon>
-            Done
+            Add all to Cart
           </button>
         </ion-buttons>
       </ion-col>
