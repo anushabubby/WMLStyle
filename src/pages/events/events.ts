@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LandingViewPage } from '../landingView/landingView';
+import { EventsQuestionsPage } from '../eventsQuestions/eventsQuestions';
 
 @Component({
   selector: 'page-events',
@@ -14,6 +15,6 @@ export class EventsPage {
     this.navCtrl.setRoot(LandingViewPage,'lView');
   }
   goToEventsQuestions(){
-    //this.navCtrl.setRoot(EventsQuestionnairePage);
+    this.navCtrl.setRoot(EventsQuestionsPage);
   }
 }
