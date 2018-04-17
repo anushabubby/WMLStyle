@@ -1,0 +1,404 @@
+<ion-header class="page-header">
+  <ion-navbar align-title=”center” height="auto">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <img
+        class="displayed picker-opts-left" height="25 px" width="25 px"
+        src="../assets/imgs/commonImgs/walmartLogo.png"/>
+    </ion-buttons>
+    <ion-title>
+      <span text-color="my-custom-color"> Let's Plan..! </span>
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="choice">
+      <ion-segment-button value="recipes">
+        Recipes
+      </ion-segment-button>
+      <ion-segment-button value="party">
+        Plan Party
+      </ion-segment-button>
+      <ion-segment-button value="gifts">
+        Gifts
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
+</ion-header>
+
+
+
+<ion-content padding class="page-home">
+
+
+  <div [ngSwitch]="choice">
+    <ion-list *ngSwitchCase="'recipes'">
+
+      <!--<ion-item>
+        <ion-label>Peanuts</ion-label>
+        <ion-toggle value="Peanuts" checked="true"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lactose</ion-label>
+        <ion-toggle value="Lactose" ></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Seafood</ion-label>
+        <ion-toggle value="Seafood" ></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gluten</ion-label>
+        <ion-toggle value="Gluten"></ion-toggle>
+      </ion-item>-->
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-card>
+              <img class="center" src="../assets/imgs/xmas/recipe/xmasreindeercupcake.jpg"/>
+              <ion-card-content>
+                <ion-card-title>
+                  Christmas Reindeer Cupcakes
+                </ion-card-title>
+                <p>
+                  "Cute reindeer cupcakes for Christmas that the kids will absolutely adore. These cupcakes are great
+                  anytime of year, however, simply skip the reindeer decorating! You can get the kids to help you
+                  decorate for loads of family fun."
+                </p>
+              </ion-card-content>
+              <ion-row>
+                <ion-col>
+                  <button ion-button icon-left clear small>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>30 Likes</div>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>10 Comments</div>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-left clear small>
+                    <ion-icon name="cart"></ion-icon>
+                    <div>Add recipe to cart</div>
+                  </button>
+                </ion-col>
+                <!--<ion-col center text-center>-->
+                <!--<ion-note>-->
+                <!--11h ago-->
+                <!--</ion-note>-->
+                <!--</ion-col>-->
+              </ion-row>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card>
+              <img class="center" src="../assets/imgs/xmas/recipe/xmascreemechesepenguin.jpg"/>
+              <ion-card-content>
+                <ion-card-title>
+                  Cream Cheese Penguin
+                </ion-card-title>
+                <p>
+                  "Just imagine a cute display of penguins, made with black olives, carrots and cream cheese! You can
+                  add scarves and hats by using fresh red pepper strips, or canned pimentos cut into different shapes.
+                  Use frilly toothpicks if you can."
+                </p>
+              </ion-card-content>
+              <ion-row>
+                <ion-col>
+                  <button ion-button icon-left clear small>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>12 Likes</div>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>4 Comments</div>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-left clear small>
+                    <ion-icon name="cart"></ion-icon>
+                    <div>Add recipe to cart</div>
+                  </button>
+                </ion-col>
+                <!--<ion-col center text-center>-->
+                <!--<ion-note>-->
+                <!--11h ago-->
+                <!--</ion-note>-->
+                <!--</ion-col>-->
+              </ion-row>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-6>
+            <ion-card>
+              <img class="center" src="../assets/imgs/xmas/recipe/gingerbreadmen.jpg"/>
+              <ion-card-content>
+                <ion-card-title>
+                  Gingerbread Men
+                </ion-card-title>
+                <p>
+                  "This recipe for gingerbread men uses butterscotch pudding mix and doesn't require molasses!"
+                </p>
+              </ion-card-content>
+              <ion-row>
+                <ion-col>
+                  <button ion-button icon-left clear small>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>3 Likes</div>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>No Comments</div>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-left clear small>
+                    <ion-icon name="cart"></ion-icon>
+                    <div>Add recipe to cart</div>
+                  </button>
+                </ion-col>
+                <!--<ion-col center text-center>-->
+                <!--<ion-note>-->
+                <!--11h ago-->
+                <!--</ion-note>-->
+                <!--</ion-col>-->
+              </ion-row>
+            </ion-card>
+          </ion-col>
+          <!-- <ion-col col-6>
+             <ion-card>
+               <img class="center" src="../assets/imgs/xmas/recipe/xmascreemechesepenguin.jpg"/>
+               <ion-card-content>
+                 <ion-card-title>
+                   Cream Cheese Penguin
+                 </ion-card-title>
+                 <p>
+                   "Just imagine a cute display of penguins, made with black olives, carrots and cream cheese! You can add scarves and hats by using fresh red pepper strips, or canned pimentos cut into different shapes. Use frilly toothpicks if you can."
+                 </p>
+               </ion-card-content>
+               <ion-row>
+                 <ion-col>
+                   <button ion-button icon-left clear small>
+                     <ion-icon name="thumbs-up"></ion-icon>
+                     <div>12 Likes</div>
+                   </button>
+                 </ion-col>
+                 <ion-col>
+                   <button ion-button icon-left clear small>
+                     <ion-icon name="text"></ion-icon>
+                     <div>4 Comments</div>
+                   </button>
+                 </ion-col>
+                 &lt;!&ndash;<ion-col center text-center>&ndash;&gt;
+                 &lt;!&ndash;<ion-note>&ndash;&gt;
+                 &lt;!&ndash;11h ago&ndash;&gt;
+                 &lt;!&ndash;</ion-note>&ndash;&gt;
+                 &lt;!&ndash;</ion-col>&ndash;&gt;
+               </ion-row>
+             </ion-card>
+           </ion-col>-->
+
+        </ion-row>
+      </ion-grid>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'party'">
+      <!--<ion-item>
+        <ion-label>Shirt</ion-label>
+        <ion-label>Size</ion-label>
+        <ion-select [(ngModel)]="shirt">
+          <ion-option *ngFor="let item of shirtSizes" [value]="item"
+          >{{item}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pant</ion-label>
+        <ion-label>Size</ion-label>
+        <ion-select [(ngModel)]="pant">
+          <ion-option *ngFor="let item of pantSizes" [value]="item"
+          >{{item}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Shoe</ion-label>
+        <ion-label>Size</ion-label>
+        <ion-select [(ngModel)]="shoe">
+          <ion-option *ngFor="let item of items" [value]="item"
+          >{{item}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Color you dont like</ion-label>
+        <ion-select [(ngModel)]="color">
+          <ion-option value="nes">Red</ion-option>
+          <ion-option value="n64">Blue</ion-option>
+          <ion-option value="ps">Black</ion-option>
+          <ion-option value="genesis">White</ion-option>
+          <ion-option value="saturn">Purple</ion-option>
+          <ion-option value="snes">Green</ion-option>
+        </ion-select>
+      </ion-item>-->
+
+      <!--<ion-content>-->
+      <ion-list-header>
+          <ion-icon name="basket"></ion-icon>
+      Your Selected bundle:
+        <p>Total : Items-4 = $61</p>
+      </ion-list-header>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img class="center" src="../assets/imgs/xmas/pic1.jpg">
+          </ion-thumbnail>
+          <h2>6' Premium Artificial Christmas Pine Tree</h2>
+          <p>Qty: 1 x $ 40 = $40</p>
+          <button ion-button clear item-end>View Details</button>
+        </ion-item>
+        <!--</ion-list>-->
+        <!--<ion-list>-->
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img class="center" src="../assets/imgs/xmas/pic2.jpg">
+          </ion-thumbnail>
+          <h2>100 Blue Christmas Tree Mini Lights</h2>
+          <p>Qty: 3 x $ 7 = $21</p>
+          <button ion-button clear item-end>View Details</button>
+        </ion-item>
+      </ion-list>
+      <!--</ion-content>-->
+
+    </ion-list>
+
+
+    <ion-list *ngSwitchCase="'gifts'">
+
+      <!-- <ion-item>
+         <ion-label>Vegetarian</ion-label>
+         <ion-toggle value="lifeStyle" checked="true"></ion-toggle>
+       </ion-item>
+
+       <ion-item>
+         <ion-label>Vegan</ion-label>
+         <ion-toggle value="Vegan" ></ion-toggle>
+       </ion-item>
+
+       <ion-item>
+         <ion-label>Keto diet</ion-label>
+         <ion-toggle value="Keto" ></ion-toggle>
+       </ion-item>
+
+       <ion-item>
+         <ion-label>Low Carb diet</ion-label>
+         <ion-toggle value="LowCarb"></ion-toggle>
+       </ion-item>
+
+       <ion-item>
+         <ion-label>High Protein diet</ion-label>
+         <ion-toggle value="HighProtein"></ion-toggle>
+       </ion-item>
+
+       <ion-item>
+         <ion-label>Liquid diet</ion-label>
+         <ion-toggle value="LiquidProtein"></ion-toggle>
+       </ion-item>-->
+
+    </ion-list>
+  </div>
+
+  <div [ngSwitch]="choice">
+    <ion-row *ngSwitchCase="'recipes'">
+      <ion-col col-6>
+        <ion-buttons end>
+          <button ion-button outline item-end icon-left (click)=skipAllergies()>
+            <ion-icon name="arrow-dropright"></ion-icon>
+            Skip
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col col-6>
+        <ion-buttons end>
+          <button ion-button outline (click)="skipAllergies()"
+                  item-end icon-right>
+            <ion-icon name="thumbs-up"></ion-icon>
+            Done
+          </button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngSwitchCase="'party'">
+      <ion-col>
+        <ion-buttons end>
+          <button ion-button outline item-end icon-left (click)=skipStyle()>
+            <ion-icon name="arrow-dropright"></ion-icon>
+            Skip
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col>
+        <ion-buttons end>
+          <button ion-button outline (click)="skipStyle()"
+                  item-end icon-right>
+            <ion-icon name="thumbs-up"></ion-icon>
+            Done
+          </button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngSwitchCase="'gifts'">
+      <ion-col>
+        <ion-buttons start>
+          <button ion-button outline item-end icon-left>
+            <ion-icon name="arrow-dropright"></ion-icon>
+            Skip
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col>
+        <ion-buttons end>
+          <button ion-button outline (click)="goToHome()"
+                  item-end icon-right>
+            <ion-icon name="thumbs-up"></ion-icon>
+            Done
+          </button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+  <ion-fab bottom right #fab2 style="position: absolute">
+    <button ion-fab color="light">
+      <ion-icon name="settings"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab>
+        <ion-icon name="cart"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="paper"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="card"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

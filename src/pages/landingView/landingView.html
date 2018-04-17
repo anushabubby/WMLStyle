@@ -21,6 +21,12 @@
       <button ion-fab><ion-icon name="call"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="goToHolidaysPage()" >
+      {{ item }}
+    </ion-item>
+  </ion-list>
 </ion-header>
 
 <ion-content padding class="page-landingView">
@@ -28,11 +34,12 @@
   <div [ngSwitch]="passedParam">
     <ion-row *ngSwitchCase="'theme'" >
       <button ion-button large block outline icon-start
+              (click)="goToHolidaysPage()"
               class="my-button"
               style="background-image: url('../assets/imgs/landingView/holiday.jpg');
           background-size: cover; color: white">
           <a style="background: azure; color: black">Holidays</a>
-        
+
       </button>
       <br>
       <button ion-button large block outline icon-start
@@ -42,15 +49,17 @@
                      background-position: -15px center;
               background-size: cover; color: white">
               <a style="background: azure; color: black">Events</a>
-        
+
       </button>
       <br>
       <button ion-button large block outline icon-start
               class="my-button"
               style="background-image: url('../assets/imgs/landingView/getaways.jpg');
           background-size: cover; color: white">
-          <a style="background: azure; color: black">Getaways</a>
-        
+          <a style="background: azure; color: black">
+            Getaways
+          </a>
+
       </button>
     </ion-row>
     <ion-row *ngSwitchCase="'recepie'" >
@@ -59,14 +68,14 @@
               style="background-image: url('../assets/imgs/landingView/indian.jpg');
           background-size: cover; color: white">
           <a style="background: azure; color: black">Indian</a>
-        
+
       </button>
       <br>
       <button ion-button large block outline icon-start
               class="my-button"
               style="background-image: url('../assets/imgs/landingView/mediterranean.jpg'); background-size: cover; color: white">
               <a style="background: azure; color: black">Mediterranean</a>
-        
+
       </button>
       <br>
       <button ion-button large block outline icon-start
@@ -74,7 +83,7 @@
               style="background-image: url('../assets/imgs/landingView/italian.jpg');
           background-size: cover; color: white">
           <a style="background: azure; color: black">Italian</a>
-        
+
       </button>
     </ion-row>
     <ion-row *ngSwitchCase="'electronics'" >
@@ -84,7 +93,7 @@
               background-position: -50px center;
           background-size: cover; color: white">
           <a style="background: azure; color: black">TV</a>
-        
+
       </button>
       <br>
       <button ion-button large block outline icon-start
@@ -93,7 +102,7 @@
               style="background-image: url('../assets/imgs/landingView/camera.jpg');
               background-size: cover; color: white">
               <a style="background: azure; color: black">Camera</a>
-        
+
       </button>
       <br>
       <button ion-button large block outline icon-start
@@ -102,7 +111,7 @@
           background-position: -15px center;
           background-size: cover; color: white">
           <a style="background: azure; color: black">Gaming</a>
-        
+
       </button>
     </ion-row>
   </div>

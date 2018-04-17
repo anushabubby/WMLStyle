@@ -12,8 +12,10 @@ import { HomePage } from '../pages/home/home';
 import { LandingViewPage } from '../pages/landingView/landingView';
 import { QuestionnairePage } from '../pages/questionnaire/questionnaire';
 import { ProductPage } from '../pages/products/product';
-import { EventsPage } from '../pages/events/events'
 import { CartViewPage } from '../pages/cartView/cartView';
+import { EventsPage } from '../pages/events/events'
+import { XmasHolidayPage } from '../pages/xmasHoliday/xmasHoliday';
+import { XmasPreferencesPage } from '../pages/xmaspreferences/xmaspreferences';
 import { EventsQuestionsPage } from '../pages/eventsQuestions/eventsQuestions'
 import { EventsNFLItems } from '../pages/eventsNFLItems/eventsNFLItems'
 
@@ -30,6 +32,8 @@ import { EventsNFLItems } from '../pages/eventsNFLItems/eventsNFLItems'
     ProductPage,
     EventsPage,
     CartViewPage,
+    XmasPreferencesPage,
+    XmasHolidayPage,
     EventsQuestionsPage,
     EventsNFLItems
   ],
@@ -48,7 +52,10 @@ import { EventsNFLItems } from '../pages/eventsNFLItems/eventsNFLItems'
     LandingViewPage,
     QuestionnairePage,
     ProductPage,
+    CartViewPage,
     EventsPage,
+    XmasPreferencesPage,
+    XmasHolidayPage,
     CartViewPage,
     EventsQuestionsPage,
     EventsNFLItems
