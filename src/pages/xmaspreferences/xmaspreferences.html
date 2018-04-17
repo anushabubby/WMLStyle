@@ -1,0 +1,150 @@
+<ion-header class="page-header">
+  <ion-navbar align-title=”center” height="auto">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <img
+        class="displayed picker-opts-left"  height="25 px" width="25 px"
+        src="../assets/imgs/commonImgs/walmartLogo.png" />
+    </ion-buttons>
+    <ion-title>
+      <span text-color="my-custom-color"> Help us customize! </span>
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="choice">
+      <ion-segment-button value="allergies">
+        Recipes
+      </ion-segment-button>
+      <ion-segment-button value="style">
+        Decorations
+      </ion-segment-button>
+      <ion-segment-button value="lifeStyle">
+        Gifts
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding class="page-home">
+
+  <div [ngSwitch]="choice">
+    <ion-list *ngSwitchCase="'allergies'">
+      <ion-list radio-group *ngFor="let ques of questionnaireDetails">
+        <ion-list-header text-wrap>
+          <ion-icon item-start name="clipboard"></ion-icon>
+          {{ques.question}}
+        </ion-list-header>
+
+        <ion-item *ngFor="let option of ques.options">
+          <ion-label color="dark">{{ option }}</ion-label>
+          <ion-radio value={{option}}></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'style'">
+      <ion-list radio-group *ngFor="let ques of questionnaireDetails2">
+        <ion-list-header text-wrap>
+          <ion-icon item-start name="clipboard"></ion-icon>
+          {{ques.question}}
+        </ion-list-header>
+
+        <ion-item *ngFor="let option of ques.options">
+          <ion-label color="dark">{{ option }}</ion-label>
+          <ion-radio value={{option}}></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'lifeStyle'">
+      <ion-list radio-group *ngFor="let ques of questionnaireDetails3">
+        <ion-list-header text-wrap>
+          <ion-icon item-start name="clipboard"></ion-icon>
+          {{ques.question}}
+        </ion-list-header>
+
+        <ion-item *ngFor="let option of ques.options">
+          <ion-label color="dark">{{ option }}</ion-label>
+          <ion-radio value={{option}}></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+
+  <div [ngSwitch]="choice">
+    <ion-row *ngSwitchCase="'allergies'" >
+      <ion-col col-6>
+        <ion-buttons end>
+          <button ion-button outline item-end icon-left (click)=skipAllergies()>
+            <ion-icon name="arrow-dropright"></ion-icon>
+            Skip
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col col-6>
+        <ion-buttons end>
+          <button ion-button outline (click)="skipAllergies()"
+                  item-end icon-right>
+            <ion-icon name="thumbs-up"></ion-icon>
+            Done
+          </button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngSwitchCase="'style'" >
+      <ion-col col-6>
+        <ion-buttons end>
+          <button ion-button outline item-end icon-left (click)=skipStyle()>
+            <ion-icon name="arrow-dropright"></ion-icon>
+            Skip
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col col-6>
+        <ion-buttons end>
+          <button ion-button outline (click)="skipStyle()"
+                  item-end icon-right>
+            <ion-icon name="thumbs-up"></ion-icon>
+            Done
+          </button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngSwitchCase="'lifeStyle'" >
+      <ion-col>
+        <ion-buttons start>
+          <button ion-button outline item-end icon-left>
+            <ion-icon name="arrow-dropright"></ion-icon>
+            Skip
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col>
+        <ion-buttons end>
+          <button ion-button outline (click)="goToHome()"
+                  item-end icon-right>
+            <ion-icon name="thumbs-up"></ion-icon>
+            Done
+          </button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <ion-fab bottom right #fab2 style="position: absolute">
+    <button ion-fab color="light"><ion-icon name="settings"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="cart"></ion-icon></button>
+      <button ion-fab><ion-icon name="paper"></ion-icon></button>
+      <button ion-fab><ion-icon name="card"></ion-icon></button>
+      <button ion-fab><ion-icon name="call"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
