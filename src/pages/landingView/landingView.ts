@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { QuestionnairePage } from '../questionnaire/questionnaire';
 import { HomePage } from '../home/home';
+import { EventsPage } from '../events/events';
 
 @Component({
   selector: 'page-landingView',
@@ -18,5 +19,8 @@ export class LandingViewPage {
   }
   goToQuestionnaire(){
     this.navCtrl.setRoot(QuestionnairePage);
+  }
+  goToAllEventsPage(){
+    this.navCtrl.setRoot(EventsPage);
   }
 }
