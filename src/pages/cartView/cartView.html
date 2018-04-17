@@ -1,0 +1,48 @@
+<ion-header class="page-header">
+  <ion-navbar align-title=”center”>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <button ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <span text-color="my-custom-color"> WM Life Style </span>
+    </ion-title>
+  </ion-navbar>
+  <ion-fab bottom right #fab2 style="position: absolute">
+    <button ion-fab color="light"><ion-icon name="settings"></ion-icon></button>
+    <ion-fab-list side="bottom">
+      <button ion-fab><ion-icon name="cart"></ion-icon></button>
+      <button ion-fab><ion-icon name="paper"></ion-icon></button>
+      <button ion-fab><ion-icon (click)="goToCart()"
+        name="card"></ion-icon></button>
+      <button ion-fab><ion-icon name="call"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-header>
+
+<ion-content>
+  {{helooooo}}
+  <ion-list>
+    <ion-item *ngFor="let camera of cameraArray; let i = index">
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/products/cameraImg.jpg">
+      </ion-avatar>
+      <h2><b>{{ camera.name }}</b></h2>
+      <h3>{{ camera.product }}</h3>
+      <h3>${{ camera.price  }}</h3>
+      <h4 text-wrap> Details: {{ camera.details }}</h4>
+      <ion-row>
+        <ion-buttons>
+          <button ion-button outline (tap)="removeFromCart($event, camera)">
+            <ion-icon name="trash"> Remove from cart</ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-row>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
