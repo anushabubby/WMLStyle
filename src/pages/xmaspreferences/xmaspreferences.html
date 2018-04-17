@@ -31,7 +31,11 @@
 
 <ion-content padding class="page-home">
 
+  <p></p>
+  <br>
+  
   <div [ngSwitch]="choice">
+
     <ion-list *ngSwitchCase="'allergies'">
       <ion-list radio-group *ngFor="let ques of questionnaireDetails">
         <ion-list-header text-wrap>
